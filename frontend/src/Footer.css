@@ -1,0 +1,36 @@
+#footer{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7056d6;
+    color: white;
+    font-size:12px;
+}
+.textCenter{
+    text-align: center;
+}
+.footerContainer-1{
+    font-size: 1em;
+    margin-top: 18px;
+}
+.footerContainer-1 > div{
+    margin: 9px;
+}
+.footerContainer-1 > div > a{
+    color: white;
+    text-decoration: none;
+}
+.footerContainer-2{
+    font-size: 1em;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(121 94 219);
+    
+}

@@ -1,0 +1,108 @@
+#navBar{
+    background-color: #7056d6;
+    height:70px;
+    display:flex;
+    justify-content: space-between;
+}
+
+#brandName{
+    padding-left: 10px;
+}
+#brandImage > img{
+    height: 40px;
+    padding-left: 30px;
+}
+#navBarItems{
+    display: flex;
+    margin: 20px 40px;
+}
+#navBarItems > li{
+    display: flex;
+    padding: 6px 16px;
+    color: white;
+    font-size: large;
+}
+
+#navBarItems > li:hover{
+    color: rgb(216, 204, 204);
+}
+#hamBurger{
+    margin: 17px;
+    background-color: rgb(124 109 238);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 9px;
+    border:2px solid rgb(255, 255, 255);
+    padding:4px;
+}
+#hamBurgerMeanu{
+    padding:0px;
+    color: white;
+    margin: 0px;
+    flex-direction: column;
+    background-color: rgb(121 94 219);
+}
+#hamBurgerMeanu > li{
+    display: flex;
+    padding: 1px 5px;
+    margin: 4px 15px;
+}
+#hamBurgerMeanu > li:hover{
+    color: rgb(216, 204, 204);
+}
+.stripes{
+    opacity: 1;
+    margin:3px;
+    width: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: white;
+    transition: all 400ms;
+}
+.animeOfOpenMeanu{
+    animation: animeOfOpenMeanu 150ms forwards linear;
+}
+.animeOfCloseMeanu{
+    animation: animeOfCloseMeanu 150ms forwards linear;
+}
+
+@keyframes animeOfOpenMeanu{
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 200px;
+    }
+}
+@keyframes animeOfCloseMeanu{
+    0%{
+        height: 200px;
+    }
+    100%{
+        height: 0px;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    #navBarItems{
+        display: none;
+    }
+    #brandImage > img{
+        height: 40px;
+        padding-left: 20px;
+    }
+    #hamBurger{
+        display:flex;
+    }
+}
+@media only screen and (min-width:650px){
+    #hamBurgerMeanu{
+        display:none !important;
+    }
+}
+
+
+.pointer{
+    cursor: pointer;
+}
