@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-j-#m8wp55=fq=@ct_-mbvf$i2d4*5jrar+$i-)8ptsia^+&t=t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-todo-list-meer.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -129,10 +130,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'./frontend/build/static/')
 ]
+
+
+MEDIA_ROOT= BASE_DIR / 'media'
+MEDIA_URL="/media/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
